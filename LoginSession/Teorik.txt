@@ -1,0 +1,14 @@
+﻿
+
+             var user = "123";
+            //Sessiona veri yazma
+            HttpContext.Session.SetString("key", "value");
+            HttpContext.Session.SetString("user", user);
+
+            //Session'dan veri çekme
+
+            var value = HttpContext.Session.GetString("key");
+
+            //Session'dan veri silme
+            HttpContext.Session.Clear(); //Bütün sessionları temizler
+            HttpContext.Session.Remove("key"); //Spesifik session temizler
